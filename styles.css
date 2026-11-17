@@ -23,7 +23,7 @@ button, input, textarea { font: inherit; }
 .brand img { width: clamp(152px, 17vw, 226px); height: auto; }
 .nav { display: flex; align-items: center; gap: clamp(22px, 4vw, 66px); font: 600 16px var(--display); }
 .nav a { text-decoration: none; position: relative; white-space: nowrap; }
-.nav a:not(.nav-contact)::after { position: absolute; content: ""; height: 2px; bottom: -8px; left: 0; width: 100%; background: var(--lime); transform: scaleX(0); transform-origin: right; transition: transform .25s ease; }
+.nav a:not(.nav-contact)::after { position: absolute; content: ""; height: 2px; border-radius: 999px; bottom: -8px; left: 0; width: 100%; background: var(--lime); transform: scaleX(0); transform-origin: right; transition: transform .25s ease; }
 .nav a:hover::after, .nav a[aria-current="page"]::after { transform: scaleX(1); transform-origin: left; }
 .nav .nav-contact { color: var(--white); background: var(--green); padding: 13px 25px; border-radius: 16px; transition: background .2s ease, transform .2s ease; }
 .nav .nav-contact:hover { background: #174c3c; transform: translateY(-2px); }
