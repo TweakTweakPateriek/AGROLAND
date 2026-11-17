@@ -32,8 +32,8 @@
       '<article class="why-item"><span class="quality-icon icon-flexibel" aria-hidden="true"></span><h3>Flexibel</h3><p>Meedenken, aanpassen,<br>samen groeien</p></article>' +
       '</div></section></main>',
     about: '<main>' +
-      '<section class="hero hero-about" aria-label="Over Agroland"><h1 class="hero-copy light"><span class="hero-line hero-line-one">Geworteld in de landbouw,</span><span class="hero-line hero-line-two">gericht op de toekomst.</span></h1></section>' +
-      '<section class="section about-copy reveal"><h1>Gedreven door landbouw.<br>Gebouwd op vertrouwen.</h1><p>Agroland is een agrarisch bedrijf gevestigd in Ligota, Polen. Met een passie voor landbouw, praktijkervaring en moderne machines zetten wij ons dagelijks in voor ons eigen akkerbouwbedrijf en voor andere agrarische ondernemers.</p><p>Naast het verbouwen van gewassen zoals graan, maïs en koolzaad ondersteunen wij andere landbouwbedrijven met verschillende loonwerkzaamheden. Daarbij staan betrouwbaarheid, professionaliteit en flexibiliteit centraal. We denken mee met onze klanten, passen ons aan wanneer dat nodig is en streven naar een goede samenwerking.</p><p>Bij Agroland geloven we dat je samen verder komt. Door hard te werken, afspraken na te komen en te blijven ontwikkelen, bouwen we aan duurzame relaties en een sterke toekomst.</p><p><strong>Agroland. Werken aan groei.</strong></p><a class="button" href="wat-we-doen.html">Bekijk onze werkzaamheden</a></section></main>',
+      '<section class="hero hero-about" aria-label="Over Agroland"><h1 class="hero-copy light"><span class="hero-line hero-line-one">Geworteld in de landbouw.</span><span class="hero-line hero-line-two">Gericht op de toekomst.</span></h1></section>' +
+      '<section class="section about-copy reveal"><h1>Gedreven door landbouw.<br>Gebouwd op vertrouwen.</h1><p>Agroland is een agrarisch bedrijf gevestigd in Ligota, Polen. Met een passie voor landbouw, praktijkervaring en moderne machines zetten wij ons dagelijks in voor ons eigen akkerbouwbedrijf en voor andere agrarische ondernemers.</p><p>Naast het verbouwen van gewassen zoals graan, maïs en koolzaad ondersteunen wij andere landbouwbedrijven met verschillende loonwerkzaamheden. Daarbij staan betrouwbaarheid, professionaliteit en flexibiliteit centraal. We denken mee met onze klanten, passen ons aan wanneer dat nodig is en streven naar een goede samenwerking.</p><p>Bij Agroland geloven we dat je samen verder komt. Door hard te werken, afspraken na te komen en te blijven ontwikkelen, bouwen we aan duurzame relaties en een sterke toekomst.</p><p><strong>Agroland. Werken aan groei.</strong></p><a class="button cta-reveal" href="wat-we-doen.html">Bekijk onze werkzaamheden</a></section></main>',
     services: '<main>' +
       hero("hero-services","Sterk op het land.<br>Betrokken bij elke klus.",false) +
       '<section class="section services-intro reveal"><h1>Thuis in akkerbouw.<br>Sterk in loonwerk.</h1><p>Bij Agroland draait alles om landbouw. Met praktijkervaring, moderne machines en een betrokken aanpak werken wij dagelijks aan ons eigen akkerbouwbedrijf en ondersteunen we andere agrarische ondernemers. Van werkzaamheden op onze eigen velden tot loonwerk voor klanten: we zetten ons in voor een goed resultaat.</p>' +
@@ -54,6 +54,21 @@
   };
   const site = document.getElementById("site");
   site.innerHTML = nav + pages[page] + footer;
+  if (page === "about") {
+    const aboutTitle = document.querySelector(".hero-about .hero-copy");
+    const lowerLine = document.querySelector(".hero-about .hero-line-two");
+    const setAboutAccentLength = () => {
+      const text = lowerLine && lowerLine.firstChild;
+      if (!text || text.nodeType !== Node.TEXT_NODE || text.length < 5) return;
+      const range = document.createRange();
+      range.setStart(text, 4);
+      range.setEnd(text, text.length);
+      aboutTitle.style.setProperty("--about-accent-width", Math.ceil(range.getBoundingClientRect().width) + "px");
+    };
+    setAboutAccentLength();
+    window.addEventListener("resize", setAboutAccentLength, { passive: true });
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(setAboutAccentLength);
+  }
   const menu = document.querySelector(".menu-toggle");
   const navEl = document.querySelector(".nav");
   menu.addEventListener("click", () => {
@@ -79,10 +94,12 @@
     document.querySelectorAll(".reveal-background").forEach((item) => backgroundObserver.observe(item));
     const lateObserver = observeOnce(.55, "0px 0px -10% 0px");
     lateRevealItems.forEach((item) => lateObserver.observe(item));
+    const ctaObserver = observeOnce(.35, "0px 0px -8% 0px");
+    document.querySelectorAll(".cta-reveal").forEach((item) => ctaObserver.observe(item));
     const collabContentObserver = observeOnce(.55, "0px 0px -10% 0px", "content-visible");
     document.querySelectorAll(".collab").forEach((item) => collabContentObserver.observe(item));
   } else {
-    document.querySelectorAll(".reveal").forEach((item) => item.classList.add("is-visible"));
+    document.querySelectorAll(".reveal, .cta-reveal").forEach((item) => item.classList.add("is-visible"));
     document.querySelectorAll(".collab").forEach((item) => item.classList.add("background-visible", "content-visible"));
   }
 
