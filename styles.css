@@ -41,7 +41,7 @@ button, input, textarea { font: inherit; }
 .hero-services::before { z-index: -2; background-image: url("assets/services-hero.jpg"); background-size: cover; background-position: center; opacity: 0; animation: hero-image-in 1.2s cubic-bezier(.2,.65,.25,1) both; }
 .hero-services::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, #00170a00 50%, #ffffff21 100%); }
 .hero-gallery { height: calc(100vh - var(--header-height)); height: calc(100svh - var(--header-height)); min-height: 0; background-image: none; align-items: flex-end; }
-.hero-gallery::before { z-index: -2; background-image: url("assets/gallery-mais-01.jpg"); background-size: cover; background-position: center; opacity: 0; animation: hero-image-in 1.2s cubic-bezier(.2,.65,.25,1) both; }
+.hero-gallery::before { z-index: -2; background-image: url("assets/gallery-hero.jpg"); background-size: cover; background-position: center; opacity: 0; animation: hero-image-in 1.2s cubic-bezier(.2,.65,.25,1) both; }
 .hero-gallery::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, #00170a00 50%, #00170a30 100%); }
 .hero-gallery .hero-copy { max-width: 720px; white-space: nowrap; animation: none; }
 .hero-gallery .hero-line { display: block; opacity: 0; animation: hero-line-in .78s .86s cubic-bezier(.2,.75,.25,1) both; }
