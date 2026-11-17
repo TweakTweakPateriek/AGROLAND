@@ -47,7 +47,7 @@
       '<section class="gallery-motion" aria-label="Fotocarrousel"><div class="marquee reveal-child"><div class="marquee-track" data-gallery-row="one"></div></div><div class="marquee reveal-child"><div class="marquee-track" data-gallery-row="two"></div></div></section>' +
       '<section class="section gallery-copy reveal"><h1>Een kijkje in ons werk.</h1><p>Van het werk op het land tot het onderhoud van onze machines: bij Agroland is geen dag hetzelfde. In deze fotogalerij krijg je een indruk van onze dagelijkse werkzaamheden, de machines die we gebruiken en de mensen achter het werk.</p></section></main>',
     contact: '<main>' +
-      hero("hero-contact","Korte lijnen.<br>Sterke samenwerking.",false) +
+      '<section class="hero hero-contact" aria-label="Contact"><h1 class="hero-copy"><span class="hero-line hero-line-one">Korte lijnen.</span><span class="hero-line hero-line-two">Sterke samenwerking.</span></h1></section>' +
       '<section class="section contact-intro reveal"><h1>Neem contact met ons op.</h1><p>Heb je vragen over onze loonwerkzaamheden, wil je informeren naar onze landbouwproducten of de mogelijkheden voor een samenwerking bespreken? Neem gerust contact met ons op. We denken graag met je mee.</p></section>' +
       '<section class="section contact-details"><img class="reveal-child" src="' + assets("contact-location.jpg") + '" alt="Agroland en landbouwvoertuigen bij de bedrijfshal"><div class="reveal-child"><h2>Agroland</h2><p><a href="https://maps.app.goo.gl/8qCasn4jPfLJa5pj9" target="_blank" rel="noopener noreferrer">Hoofdstraat 10<br>12-345 AB Żywocice, Polen</a></p><p><a href="tel:+4812345678">+48 123 456 78</a><br><a href="mailto:info@agroland.pl">info@agroland.pl</a></p></div></section>' +
       '<section class="section contact-form-wrap reveal"><h2>Stuur ons een bericht.</h2><form class="contact-form" id="contact-form"><div class="form-field reveal-child"><label for="name">Naam</label><input id="name" name="Naam" placeholder="Je naam" required autocomplete="name"></div><div class="form-field reveal-child"><label for="email">E-mailadres</label><input id="email" name="E-mailadres" type="email" placeholder="Je e-mailadres" required autocomplete="email"></div><div class="form-field reveal-child"><label for="subject">Waar gaat je bericht over?</label><input id="subject" name="Onderwerp" placeholder="Bijv. loonwerk of landbouwproducten" required></div><div class="form-field reveal-child"><label for="message">Bericht</label><textarea id="message" name="Bericht" placeholder="Waarmee kunnen we je helpen?" required></textarea></div><button class="button" type="submit">Verstuur bericht</button><p class="form-note">Je e-mailprogramma opent om je bericht te versturen.</p></form></section></main>'
@@ -87,6 +87,17 @@
     setGalleryAccentLength();
     window.addEventListener("resize", setGalleryAccentLength, { passive: true });
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(setGalleryAccentLength);
+  }
+  if (page === "contact") {
+    const contactTitle = document.querySelector(".hero-contact .hero-copy");
+    const contactLine = document.querySelector(".hero-contact .hero-line-two");
+    const setContactAccentLength = () => {
+      if (!contactTitle || !contactLine) return;
+      contactTitle.style.setProperty("--contact-accent-width", Math.ceil(contactLine.getBoundingClientRect().width) + "px");
+    };
+    setContactAccentLength();
+    window.addEventListener("resize", setContactAccentLength, { passive: true });
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(setContactAccentLength);
   }
   if (page === "services") {
     const servicesTitle = document.querySelector(".hero-services .hero-copy");
