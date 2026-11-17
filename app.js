@@ -93,7 +93,12 @@
     const contactLine = document.querySelector(".hero-contact .hero-line-two");
     const setContactAccentLength = () => {
       if (!contactTitle || !contactLine) return;
-      contactTitle.style.setProperty("--contact-accent-width", Math.ceil(contactLine.getBoundingClientRect().width) + "px");
+      const text = contactLine.firstChild;
+      if (!text || text.nodeType !== Node.TEXT_NODE) return;
+      const range = document.createRange();
+      range.setStart(text, 0);
+      range.setEnd(text, Math.min(7, text.length));
+      contactTitle.style.setProperty("--contact-accent-width", Math.ceil(range.getBoundingClientRect().width) + "px");
     };
     setContactAccentLength();
     window.addEventListener("resize", setContactAccentLength, { passive: true });
