@@ -19,8 +19,8 @@
   const pages = {
     home: '<main>' +
       '<section class="hero hero-home"><h1 class="hero-copy"><span class="hero-line hero-line-one">Werken</span><span class="hero-line hero-line-two">aan groei.</span></h1><a class="button hero-action" href="contact.html">Loonwerker nodig?</a></section>' +
-      '<section class="section collab reveal"><div><h2>Samenwerken is belangrijk.<br>Samen kun je meer.</h2><p>Met kennis, ervaring en moderne machines<br class="desktop-break"> staat Agroland klaar voor iedere uitdaging.</p><a class="button" href="wie-is-agroland.html">Ontdek Agroland</a></div><img class="rounded-photo" src="' + assets("samenwerken.jpg") + '" alt="Tractor en aanhanger op het land"></section>' +
-      '<section class="section why reveal"><h2>Waarom Agroland?</h2><div class="why-grid">' +
+      '<section class="section collab reveal reveal-late"><div><h2>Samenwerken is belangrijk.<br>Samen kun je meer.</h2><p>Met kennis, ervaring en moderne machines<br class="desktop-break"> staat Agroland klaar voor iedere uitdaging.</p><a class="button" href="wie-is-agroland.html">Ontdek Agroland</a></div><img class="rounded-photo" src="' + assets("samenwerken.jpg") + '" alt="Tractor en aanhanger op het land"></section>' +
+      '<section class="section why reveal reveal-late"><h2>Waarom Agroland?</h2><div class="why-grid">' +
       '<article class="why-item"><span class="quality-icon icon-betrouwbaar" aria-hidden="true"></span><h3>Betrouwbaar</h3><p>Afspraken na komen<br>op elk moment.</p></article>' +
       '<article class="why-item"><span class="quality-icon icon-professioneel" aria-hidden="true"></span><h3>Professioneel</h3><p>Kennis, ervaring en<br>moderne machines.</p></article>' +
       '<article class="why-item"><span class="quality-icon icon-flexibel" aria-hidden="true"></span><h3>Flexibel</h3><p>Meedenken, aanpassen,<br>samen groeien</p></article>' +
@@ -56,13 +56,20 @@
     menu.setAttribute("aria-label", open ? "Menu sluiten" : "Menu openen");
     navEl.classList.toggle("is-open", open);
   });
-  const revealItems = document.querySelectorAll(".reveal");
+  const revealItems = document.querySelectorAll(".reveal:not(.reveal-late)");
+  const lateRevealItems = document.querySelectorAll(".reveal-late");
   if ("IntersectionObserver" in window) {
-    const observer = new IntersectionObserver((entries) => entries.forEach((entry) => {
-      if (entry.isIntersecting) { entry.target.classList.add("is-visible"); observer.unobserve(entry.target); }
-    }), { threshold: .12 });
+    const observeOnce = (threshold, rootMargin) => {
+      const observer = new IntersectionObserver((entries) => entries.forEach((entry) => {
+        if (entry.isIntersecting) { entry.target.classList.add("is-visible"); observer.unobserve(entry.target); }
+      }), { threshold, rootMargin });
+      return observer;
+    };
+    const observer = observeOnce(.12, "0px");
     revealItems.forEach((item) => observer.observe(item));
-  } else revealItems.forEach((item) => item.classList.add("is-visible"));
+    const lateObserver = observeOnce(.55, "0px 0px -10% 0px");
+    lateRevealItems.forEach((item) => lateObserver.observe(item));
+  } else document.querySelectorAll(".reveal").forEach((item) => item.classList.add("is-visible"));
 
   const galleryFiles = [
     ["gallery-5.jpg","Tractor met aanhanger tijdens de oogst"],
