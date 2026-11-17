@@ -165,10 +165,10 @@
     ["gallery-pand-07.jpg","Pand – foto 7"],
     ["gallery-pand-08.jpg","Pand – foto 8"],
     ["gallery-pand-09.jpg","Pand – foto 9"],
-    ["gallery-personen-01.jpeg","Personen – foto 1"],
-    ["gallery-personen-02.jpeg","Personen – foto 2"],
-    ["gallery-personen-03.jpeg","Personen – foto 3"],
-    ["gallery-personen-04.jpeg","Personen – foto 4"]
+    ["gallery-personen-01.jpg","Personen – foto 1"],
+    ["gallery-personen-02.jpg","Personen – foto 2"],
+    ["gallery-personen-03.jpg","Personen – foto 3"],
+    ["gallery-personen-04.jpg","Personen – foto 4"]
   ];
   if (page === "gallery") {
     const rowOne = galleryFiles.map((_, index) => index), rowTwo = galleryFiles.map((_, index) => index);
