@@ -49,11 +49,11 @@ button, input, textarea { font: inherit; }
 .hero-gallery .hero-copy::after { width: var(--gallery-accent-width, 40%); margin-top: 15px; border-radius: 999px; background: var(--accent); transform: scaleX(0); transform-origin: right; animation: accent-line-in .55s 1.55s cubic-bezier(.2,.75,.25,1) both; }
 .hero-contact { height: calc(100vh - var(--header-height)); height: calc(100svh - var(--header-height)); min-height: 0; background-image: none; }
 .hero-contact::before { z-index: -2; background-image: url("assets/contact-hero.jpg"); background-size: cover; background-position: center 38%; opacity: 0; animation: hero-image-in 1.2s cubic-bezier(.2,.65,.25,1) both; }
-.hero-contact::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, #00170a00 50%, #00170a2b 100%); }
+.hero-contact::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, #ffffff00 38%, #ffffff55 66%, #ffffffa6 100%); }
 .hero-contact .hero-copy { max-width: 840px; white-space: nowrap; animation: none; }
 .hero-contact .hero-line { display: block; opacity: 0; animation: hero-line-in .78s .86s cubic-bezier(.2,.75,.25,1) both; }
 .hero-contact .hero-line-two { animation-delay: .98s; }
-.hero-contact .hero-copy::after { width: var(--contact-accent-width, 58%); margin-top: 15px; background: var(--accent); border-radius: 999px; transform: scaleX(0); transform-origin: right; animation: accent-line-in .55s 1.55s cubic-bezier(.2,.75,.25,1) both; }
+.hero-contact .hero-copy::after { width: var(--contact-accent-width, 35%); margin: 15px auto 0 0; background: var(--accent); border-radius: 999px; transform: scaleX(0); transform-origin: left; animation: accent-line-in .55s 1.55s cubic-bezier(.2,.75,.25,1) both; }
 .contact-details .reveal-child:nth-child(2) { transition-delay: .14s; }
 .contact-form .reveal-child:nth-child(2) { transition-delay: .08s; }
 .contact-form .reveal-child:nth-child(3) { transition-delay: .16s; }
