@@ -96,8 +96,8 @@
       const text = contactLine.firstChild;
       if (!text || text.nodeType !== Node.TEXT_NODE) return;
       const range = document.createRange();
-      range.setStart(text, 0);
-      range.setEnd(text, Math.min(7, text.length));
+      range.setStart(text, Math.min(7, text.length));
+      range.setEnd(text, text.length);
       contactTitle.style.setProperty("--contact-accent-width", Math.ceil(range.getBoundingClientRect().width) + "px");
     };
     setContactAccentLength();
