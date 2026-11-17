@@ -53,7 +53,7 @@ button, input, textarea { font: inherit; }
 .hero-contact .hero-copy { max-width: 840px; white-space: nowrap; animation: none; }
 .hero-contact .hero-line { display: block; opacity: 0; animation: hero-line-in .78s .86s cubic-bezier(.2,.75,.25,1) both; }
 .hero-contact .hero-line-two { animation-delay: .98s; }
-.hero-contact .hero-copy::after { width: var(--contact-accent-width, 35%); margin: 15px auto 0 0; background: var(--accent); border-radius: 999px; transform: scaleX(0); transform-origin: left; animation: accent-line-in .55s 1.55s cubic-bezier(.2,.75,.25,1) both; }
+.hero-contact .hero-copy::after { width: var(--contact-accent-width, 35%); margin: 15px 0 0 auto; background: var(--accent); border-radius: 999px; transform: scaleX(0); transform-origin: right; animation: accent-line-in .55s 1.55s cubic-bezier(.2,.75,.25,1) both; }
 .contact-details .reveal-child:nth-child(2) { transition-delay: .14s; }
 .contact-form .reveal-child:nth-child(2) { transition-delay: .08s; }
 .contact-form .reveal-child:nth-child(3) { transition-delay: .16s; }
