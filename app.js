@@ -32,7 +32,7 @@
       '<article class="why-item"><span class="quality-icon icon-flexibel" aria-hidden="true"></span><h3>Flexibel</h3><p>Meedenken, aanpassen,<br>samen groeien</p></article>' +
       '</div></section></main>',
     about: '<main>' +
-      hero("hero-about","Geworteld in de landbouw,<br>gericht op de toekomst.",true) +
+      '<section class="hero hero-about" aria-label="Over Agroland"><h1 class="hero-copy light"><span class="hero-line hero-line-one">Geworteld in de landbouw,</span><span class="hero-line hero-line-two">gericht op de toekomst.</span></h1></section>' +
       '<section class="section about-copy reveal"><h1>Gedreven door landbouw.<br>Gebouwd op vertrouwen.</h1><p>Agroland is een agrarisch bedrijf gevestigd in Ligota, Polen. Met een passie voor landbouw, praktijkervaring en moderne machines zetten wij ons dagelijks in voor ons eigen akkerbouwbedrijf en voor andere agrarische ondernemers.</p><p>Naast het verbouwen van gewassen zoals graan, maïs en koolzaad ondersteunen wij andere landbouwbedrijven met verschillende loonwerkzaamheden. Daarbij staan betrouwbaarheid, professionaliteit en flexibiliteit centraal. We denken mee met onze klanten, passen ons aan wanneer dat nodig is en streven naar een goede samenwerking.</p><p>Bij Agroland geloven we dat je samen verder komt. Door hard te werken, afspraken na te komen en te blijven ontwikkelen, bouwen we aan duurzame relaties en een sterke toekomst.</p><p><strong>Agroland. Werken aan groei.</strong></p><a class="button" href="wat-we-doen.html">Bekijk onze werkzaamheden</a></section></main>',
     services: '<main>' +
       hero("hero-services","Sterk op het land.<br>Betrokken bij elke klus.",false) +
