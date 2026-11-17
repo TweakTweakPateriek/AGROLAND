@@ -35,13 +35,13 @@
       '<section class="hero hero-about" aria-label="Over Agroland"><h1 class="hero-copy light"><span class="hero-line hero-line-one">Geworteld in de landbouw.</span><span class="hero-line hero-line-two">Gericht op de toekomst.</span></h1></section>' +
       '<section class="section about-copy reveal"><h1>Gedreven door landbouw.<br>Gebouwd op vertrouwen.</h1><p>Agroland is een agrarisch bedrijf gevestigd in Ligota, Polen. Met een passie voor landbouw, praktijkervaring en moderne machines zetten wij ons dagelijks in voor ons eigen akkerbouwbedrijf en voor andere agrarische ondernemers.</p><p>Naast het verbouwen van gewassen zoals graan, maïs en koolzaad ondersteunen wij andere landbouwbedrijven met verschillende loonwerkzaamheden. Daarbij staan betrouwbaarheid, professionaliteit en flexibiliteit centraal. We denken mee met onze klanten, passen ons aan wanneer dat nodig is en streven naar een goede samenwerking.</p><p>Bij Agroland geloven we dat je samen verder komt. Door hard te werken, afspraken na te komen en te blijven ontwikkelen, bouwen we aan duurzame relaties en een sterke toekomst.</p><p><strong>Agroland. Werken aan groei.</strong></p><a class="button cta-reveal" href="wat-we-doen.html">Bekijk onze werkzaamheden</a></section></main>',
     services: '<main>' +
-      hero("hero-services","Sterk op het land.<br>Betrokken bij elke klus.",false) +
+      '<section class="hero hero-services" aria-label="Werkzaamheden van Agroland"><h1 class="hero-copy"><span class="hero-line hero-line-one">Sterk op het land.</span><span class="hero-line hero-line-two">Betrokken bij elke klus.</span></h1></section>' +
       '<section class="section services-intro reveal"><h1>Thuis in akkerbouw.<br>Sterk in loonwerk.</h1><p>Bij Agroland draait alles om landbouw. Met praktijkervaring, moderne machines en een betrokken aanpak werken wij dagelijks aan ons eigen akkerbouwbedrijf en ondersteunen we andere agrarische ondernemers. Van werkzaamheden op onze eigen velden tot loonwerk voor klanten: we zetten ons in voor een goed resultaat.</p>' +
-      '<div class="service-copy"><div><p><strong>Akkerbouw</strong>Landbouw vormt de basis van Agroland. Op onze eigen landbouwgrond verbouwen we verschillende gewassen, waaronder graan, maïs en koolzaad.</p><p>Door zelf actief te zijn in de akkerbouw weten we hoe belangrijk een goede planning, zorgvuldig werken en het juiste moment zijn. Die praktijkervaring nemen we mee in alles wat we doen.</p></div>' +
-      '<div><p><strong>Loonwerk</strong>Naast onze eigen akkerbouw voeren we loonwerkzaamheden uit voor andere agrarische ondernemers. Met onze machines en praktijkkennis ondersteunen we klanten bij hun werkzaamheden op het land.</p><p>We begrijpen dat het werk in de landbouw afhankelijk is van het weer, de omstandigheden en het seizoen. Daarom vinden we het belangrijk om flexibel te zijn, mee te denken en afspraken na te komen.</p></div>' +
-      '<div><p><strong>Samen werken aan resultaat</strong>Bij Agroland staan betrouwbaarheid, professionaliteit en flexibiliteit centraal. We geloven in duidelijke afspraken, goed contact en een praktische aanpak.</p><p>Of we nu op onze eigen velden werken of een andere ondernemer ondersteunen, ons doel blijft hetzelfde: zorgvuldig werk leveren en samen blijven groeien.</p></div></div></section>' +
-      '<section class="section products reveal"><img src="' + assets("wheat.jpg") + '" alt="Gouden graan op het veld"><div><h2>Onze landbouwproducten</h2><p>Van lokale afnemers tot grotere zakelijke partijen: Agroland biedt mogelijkheden voor de afname van landbouwproducten.</p><p>Wij richten ons voornamelijk op bedrijven die landbouwproducten inkopen voor verdere verwerking, handel of andere zakelijke doeleinden. Daarbij vinden wij langdurige samenwerkingen en heldere afspraken over afname en levering belangrijk.</p><p>Ook lokale ondernemers, horecabedrijven en particulieren kunnen bij ons informeren naar de mogelijkheden. De beschikbaarheid en afnamehoeveelheden zijn afhankelijk van het product en het seizoen.</p><p><strong>Interesse in onze landbouwproducten?</strong></p><a class="button" href="contact.html">Informeer naar de mogelijkheden</a></div></section>' +
-      '<div class="farmer-banner"><img src="' + assets("farmer.jpg") + '" alt="Een agrarisch ondernemer op het groene veld"></div></main>',
+      '<div class="service-copy"><div class="reveal-child"><p><strong>Akkerbouw</strong>Landbouw vormt de basis van Agroland. Op onze eigen landbouwgrond verbouwen we verschillende gewassen, waaronder graan, maïs en koolzaad.</p><p>Door zelf actief te zijn in de akkerbouw weten we hoe belangrijk een goede planning, zorgvuldig werken en het juiste moment zijn. Die praktijkervaring nemen we mee in alles wat we doen.</p></div>' +
+      '<div class="reveal-child"><p><strong>Loonwerk</strong>Naast onze eigen akkerbouw voeren we loonwerkzaamheden uit voor andere agrarische ondernemers. Met onze machines en praktijkkennis ondersteunen we klanten bij hun werkzaamheden op het land.</p><p>We begrijpen dat het werk in de landbouw afhankelijk is van het weer, de omstandigheden en het seizoen. Daarom vinden we het belangrijk om flexibel te zijn, mee te denken en afspraken na te komen.</p></div>' +
+      '<div class="reveal-child"><p><strong>Samen werken aan resultaat</strong>Bij Agroland staan betrouwbaarheid, professionaliteit en flexibiliteit centraal. We geloven in duidelijke afspraken, goed contact en een praktische aanpak.</p><p>Of we nu op onze eigen velden werken of een andere ondernemer ondersteunen, ons doel blijft hetzelfde: zorgvuldig werk leveren en samen blijven groeien.</p></div></div></section>' +
+      '<section class="section products"><img class="reveal-child" src="' + assets("wheat.jpg") + '" alt="Gouden graan op het veld"><div class="reveal-child"><h2>Onze landbouwproducten</h2><p>Van lokale afnemers tot grotere zakelijke partijen: Agroland biedt mogelijkheden voor de afname van landbouwproducten.</p><p>Wij richten ons voornamelijk op bedrijven die landbouwproducten inkopen voor verdere verwerking, handel of andere zakelijke doeleinden. Daarbij vinden wij langdurige samenwerkingen en heldere afspraken over afname en levering belangrijk.</p><p>Ook lokale ondernemers, horecabedrijven en particulieren kunnen bij ons informeren naar de mogelijkheden. De beschikbaarheid en afnamehoeveelheden zijn afhankelijk van het product en het seizoen.</p><p><strong>Interesse in onze landbouwproducten?</strong></p><a class="button" href="contact.html">Informeer naar de mogelijkheden</a></div></section>' +
+      '<div class="farmer-banner"><img class="reveal-child" src="' + assets("farmer.jpg") + '" alt="Een agrarisch ondernemer op het groene veld"></div></main>',
     gallery: '<main>' +
       hero("hero-gallery","Ons werk.<br>Ons verhaal.",true) +
       '<section class="gallery-motion" aria-label="Fotocarrousel"><div class="marquee"><div class="marquee-track" data-gallery-row="one"></div></div><div class="marquee"><div class="marquee-track" data-gallery-row="two"></div></div></section>' +
@@ -68,6 +68,23 @@
     setAboutAccentLength();
     window.addEventListener("resize", setAboutAccentLength, { passive: true });
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(setAboutAccentLength);
+  }
+  if (page === "services") {
+    const servicesTitle = document.querySelector(".hero-services .hero-copy");
+    const lowerLine = document.querySelector(".hero-services .hero-line-two");
+    const setServicesAccentLength = () => {
+      const text = lowerLine && lowerLine.firstChild;
+      if (!text || text.nodeType !== Node.TEXT_NODE) return;
+      const firstK = text.textContent.toLowerCase().indexOf("k");
+      if (firstK < 0) return;
+      const range = document.createRange();
+      range.setStart(text, firstK);
+      range.setEnd(text, text.length);
+      servicesTitle.style.setProperty("--services-accent-width", Math.ceil(range.getBoundingClientRect().width) + "px");
+    };
+    setServicesAccentLength();
+    window.addEventListener("resize", setServicesAccentLength, { passive: true });
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(setServicesAccentLength);
   }
   const menu = document.querySelector(".menu-toggle");
   const navEl = document.querySelector(".nav");
@@ -96,10 +113,12 @@
     lateRevealItems.forEach((item) => lateObserver.observe(item));
     const ctaObserver = observeOnce(.35, "0px 0px -8% 0px");
     document.querySelectorAll(".cta-reveal").forEach((item) => ctaObserver.observe(item));
+    const childObserver = observeOnce(.16, "0px 0px -8% 0px");
+    document.querySelectorAll(".reveal-child").forEach((item) => childObserver.observe(item));
     const collabContentObserver = observeOnce(.55, "0px 0px -10% 0px", "content-visible");
     document.querySelectorAll(".collab").forEach((item) => collabContentObserver.observe(item));
   } else {
-    document.querySelectorAll(".reveal, .cta-reveal").forEach((item) => item.classList.add("is-visible"));
+    document.querySelectorAll(".reveal, .cta-reveal, .reveal-child").forEach((item) => item.classList.add("is-visible"));
     document.querySelectorAll(".collab").forEach((item) => item.classList.add("background-visible", "content-visible"));
   }
 
