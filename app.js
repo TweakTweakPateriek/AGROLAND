@@ -21,9 +21,9 @@
       '<section class="hero hero-home"><h1 class="hero-copy">Werken<br>aan groei.</h1><a class="button hero-action" href="contact.html">Loonwerker nodig?</a></section>' +
       '<section class="section collab reveal"><div><h2>Samenwerken is belangrijk.<br>Samen kun je meer.</h2><p>Met kennis, ervaring en moderne machines<br class="desktop-break"> staat Agroland klaar voor iedere uitdaging.</p><a class="button" href="wie-is-agroland.html">Ontdek Agroland</a></div><img class="rounded-photo" src="' + assets("samenwerken.jpg") + '" alt="Tractor en aanhanger op het land"></section>' +
       '<section class="section why"><h2>Waarom Agroland?</h2><div class="why-grid">' +
-      '<article class="why-item"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 4 52 12v16c0 15-9 24-20 32C21 52 12 43 12 28V12z"/><path d="m21 31 7 7 15-16"/></svg><h3>Betrouwbaar</h3><p>Afspraken na komen<br>op elk moment.</p></article>' +
-      '<article class="why-item"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 5 38 11 47 9 49 18 57 23 54 32 57 41 49 46 47 55 38 53 32 59 26 53 17 55 15 46 7 41 10 32 7 23 15 18 17 9 26 11z"/><circle cx="32" cy="31" r="11"/><path d="M23 50 20 61m21-11 3 11"/></svg><h3>Professioneel</h3><p>Kennis, ervaring en<br>moderne machines.</p></article>' +
-      '<article class="why-item"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M31 58V32c0-15 8-24 23-27 0 14-4 24-15 29"/><path d="M31 46C17 46 9 39 7 25c13 0 21 5 24 16"/><path d="m28 31 9 7M20 34l10 11"/></svg><h3>Flexibel</h3><p>Meedenken, aanpassen,<br>samen groeien</p></article>' +
+      '<article class="why-item"><img class="quality-icon" src="' + assets("icon-betrouwbaar.png") + '" alt="" aria-hidden="true"><h3>Betrouwbaar</h3><p>Afspraken na komen<br>op elk moment.</p></article>' +
+      '<article class="why-item"><img class="quality-icon" src="' + assets("icon-professioneel.png") + '" alt="" aria-hidden="true"><h3>Professioneel</h3><p>Kennis, ervaring en<br>moderne machines.</p></article>' +
+      '<article class="why-item"><img class="quality-icon" src="' + assets("icon-flexibel.png") + '" alt="" aria-hidden="true"><h3>Flexibel</h3><p>Meedenken, aanpassen,<br>samen groeien</p></article>' +
       '</div></section></main>',
     about: '<main>' +
       hero("hero-about","Geworteld in de landbouw,<br>gericht op de toekomst.",true) +
