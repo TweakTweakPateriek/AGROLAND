@@ -118,8 +118,8 @@ button, input, textarea { font: inherit; }
 .products > .reveal-child.is-visible { opacity: 1; transform: translateY(0); }
 .products > .reveal-child:nth-child(2) { transition-delay: .16s; }
 .products .button { margin-top: 8px; }
-.farmer-banner { overflow: hidden; background: var(--white); }
-.farmer-banner img { width: min(100%, var(--content)); height: auto; margin-inline: auto; object-fit: contain; }
+.farmer-banner { width: 100%; aspect-ratio: 2 / 1; overflow: hidden; background: var(--white); }
+.farmer-banner img { width: 100%; height: 100%; object-fit: cover; object-position: center 45%; }
 .farmer-banner .reveal-child { opacity: 0; transform: translateY(20px); transition: opacity .68s ease, transform .72s cubic-bezier(.2,.75,.25,1); }
 .farmer-banner .reveal-child.is-visible { opacity: 1; transform: translateY(0); }
 .gallery-motion { background: var(--green); padding: 62px 0; overflow: hidden; }
@@ -227,6 +227,7 @@ button, input, textarea { font: inherit; }
   .service-copy > div { padding: 20px 20px 4px; }
   .service-copy p { font-size: 15px; margin-bottom: 14px; }
   .products img { height: auto; max-height: 360px; object-fit: contain; }
+  .farmer-banner { aspect-ratio: 2 / 1; }
   .gallery-motion { padding: 32px 0; }
   .marquee { margin-bottom: 16px; }
   .marquee-track { gap: 15px; }
