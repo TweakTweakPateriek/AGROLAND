@@ -43,8 +43,8 @@
       '<section class="section products"><img class="reveal-child" src="' + assets("wheat.jpg") + '" alt="Gouden graan op het veld"><div class="reveal-child"><h2>Onze landbouwproducten</h2><p>Van lokale afnemers tot grotere zakelijke partijen: Agroland biedt mogelijkheden voor de afname van landbouwproducten.</p><p>Wij richten ons voornamelijk op bedrijven die landbouwproducten inkopen voor verdere verwerking, handel of andere zakelijke doeleinden. Daarbij vinden wij langdurige samenwerkingen en heldere afspraken over afname en levering belangrijk.</p><p>Ook lokale ondernemers, horecabedrijven en particulieren kunnen bij ons informeren naar de mogelijkheden. De beschikbaarheid en afnamehoeveelheden zijn afhankelijk van het product en het seizoen.</p><p><strong>Interesse in onze landbouwproducten?</strong></p><a class="button" href="contact.html">Informeer naar de mogelijkheden</a></div></section>' +
       '<div class="farmer-banner"><img class="reveal-child" src="' + assets("farmer.jpg") + '" alt="Een agrarisch ondernemer op het groene veld"></div></main>',
     gallery: '<main>' +
-      hero("hero-gallery","Ons werk.<br>Ons verhaal.",true) +
-      '<section class="gallery-motion" aria-label="Fotocarrousel"><div class="marquee"><div class="marquee-track" data-gallery-row="one"></div></div><div class="marquee"><div class="marquee-track" data-gallery-row="two"></div></div></section>' +
+      '<section class="hero hero-gallery" aria-label="Fotogalerij"><h1 class="hero-copy light"><span class="hero-line hero-line-one">Ons werk.</span><span class="hero-line hero-line-two">Ons verhaal.</span></h1></section>' +
+      '<section class="gallery-motion" aria-label="Fotocarrousel"><div class="marquee reveal-child"><div class="marquee-track" data-gallery-row="one"></div></div><div class="marquee reveal-child"><div class="marquee-track" data-gallery-row="two"></div></div></section>' +
       '<section class="section gallery-copy reveal"><h1>Een kijkje in ons werk.</h1><p>Van het werk op het land tot het onderhoud van onze machines: bij Agroland is geen dag hetzelfde. In deze fotogalerij krijg je een indruk van onze dagelijkse werkzaamheden, de machines die we gebruiken en de mensen achter het werk.</p></section></main>',
     contact: '<main>' +
       hero("hero-contact","Korte lijnen.<br>Sterke samenwerking.",false) +
@@ -68,6 +68,25 @@
     setAboutAccentLength();
     window.addEventListener("resize", setAboutAccentLength, { passive: true });
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(setAboutAccentLength);
+  }
+  if (page === "gallery") {
+    const galleryTitle = document.querySelector(".hero-gallery .hero-copy");
+    const upperLine = document.querySelector(".hero-gallery .hero-line-one");
+    const setGalleryAccentLength = () => {
+      const text = upperLine && upperLine.firstChild;
+      if (!text || text.nodeType !== Node.TEXT_NODE || text.length < 3) return;
+      const line = document.createRange();
+      line.selectNodeContents(upperLine);
+      const letter = document.createRange();
+      letter.setStart(text, 2);
+      letter.setEnd(text, 3);
+      const lineBox = line.getBoundingClientRect();
+      const letterBox = letter.getBoundingClientRect();
+      galleryTitle.style.setProperty("--gallery-accent-width", Math.ceil(lineBox.right - letterBox.left - letterBox.width / 2) + "px");
+    };
+    setGalleryAccentLength();
+    window.addEventListener("resize", setGalleryAccentLength, { passive: true });
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(setGalleryAccentLength);
   }
   if (page === "services") {
     const servicesTitle = document.querySelector(".hero-services .hero-copy");
@@ -123,17 +142,36 @@
   }
 
   const galleryFiles = [
-    ["gallery-5.jpg","Tractor met aanhanger tijdens de oogst"],
-    ["gallery-2.jpg","Onderhoud aan een landbouwband"],
-    ["gallery-4.jpg","Oogstwerk met landbouwmachines"],
-    ["gallery-6.jpg","Landbouwmachines in de loods"],
-    ["gallery-3.jpg","Onderhoud van een landbouwmachine"],
-    ["gallery-8.jpg","Tractor met kieper op het veld"],
-    ["gallery-7.jpg","Machines voor de verwerking van gewassen"],
-    ["gallery-9.jpg","Maisoogst met de hakselaar"]
+    ["gallery-mais-01.jpg","Mais – foto 1"],
+    ["gallery-mais-02.jpg","Mais – foto 2"],
+    ["gallery-mais-03.jpg","Mais – foto 3"],
+    ["gallery-mais-04.jpg","Mais – foto 4"],
+    ["gallery-mais-05.jpg","Mais – foto 5"],
+    ["gallery-aardappels-01.jpg","Aardappels – foto 1"],
+    ["gallery-aardappels-02.jpg","Aardappels – foto 2"],
+    ["gallery-aardappels-03.jpg","Aardappels – foto 3"],
+    ["gallery-aardappels-04.jpg","Aardappels – foto 4"],
+    ["gallery-aardappels-05.jpg","Aardappels – foto 5"],
+    ["gallery-aardappels-06.jpg","Aardappels – foto 6"],
+    ["gallery-aardappels-07.jpg","Aardappels – foto 7"],
+    ["gallery-aardappels-08.jpg","Aardappels – foto 8"],
+    ["gallery-aardappels-09.jpg","Aardappels – foto 9"],
+    ["gallery-pand-01.jpg","Pand – foto 1"],
+    ["gallery-pand-02.jpg","Pand – foto 2"],
+    ["gallery-pand-03.jpg","Pand – foto 3"],
+    ["gallery-pand-04.jpg","Pand – foto 4"],
+    ["gallery-pand-05.jpg","Pand – foto 5"],
+    ["gallery-pand-06.jpg","Pand – foto 6"],
+    ["gallery-pand-07.jpg","Pand – foto 7"],
+    ["gallery-pand-08.jpg","Pand – foto 8"],
+    ["gallery-pand-09.jpg","Pand – foto 9"],
+    ["gallery-personen-01.jpeg","Personen – foto 1"],
+    ["gallery-personen-02.jpeg","Personen – foto 2"],
+    ["gallery-personen-03.jpeg","Personen – foto 3"],
+    ["gallery-personen-04.jpeg","Personen – foto 4"]
   ];
   if (page === "gallery") {
-    const rowOne = [0,1,2,3], rowTwo = [4,5,6,7];
+    const rowOne = galleryFiles.map((_, index) => index), rowTwo = galleryFiles.map((_, index) => index);
     [[rowOne,"one"],[rowTwo,"two"]].forEach(([indices,row]) => {
       const track = document.querySelector('[data-gallery-row="' + row + '"]');
       const repeated = indices.concat(indices);
