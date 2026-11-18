@@ -274,3 +274,27 @@ button, input, textarea { font: inherit; }
 .icon-professioneel { position: relative; left: -4.5px; }
 @media (max-width: 620px) { .icon-professioneel { left: -3.4px; } }
 .about-copy { width: 100%; max-width: none; }
+
+/* Mobiele opmaak */
+@media (max-width: 620px) {
+  .collab { text-align: center; }
+  .collab .desktop-break { display: none; }
+  .why h2 { text-align: center; }
+  .why-grid { grid-template-columns: 1fr; gap: 26px; }
+  .why-item { display: grid; grid-template-columns: 64px minmax(0, 1fr); column-gap: 18px; align-items: center; text-align: left; }
+  .why-item .quality-icon { grid-column: 1; grid-row: 1 / span 2; margin: 0 auto; }
+  .why-item h3, .why-item p { grid-column: 2; text-align: left; }
+  .why-item h3 { align-self: end; }
+  .why-item p { align-self: start; max-width: none; margin: 0; }
+  .why-item p br { display: none; }
+  .site-footer { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 12px; font-size: 12px; overflow-wrap: anywhere; }
+  .site-footer img { width: min(150px, 100%); }
+  .about-copy { text-align: center; }
+  .hero-home::before { background-position: 58% center; }
+  .hero-about::before { background-position: 38% center; }
+  .hero-services::before { background-position: 30% center; }
+  .products { text-align: center; }
+  .products img { width: 100%; height: 340px; max-height: none; object-fit: cover; border-radius: 24px; }
+  .products h2 { font-size: clamp(17px, 5vw, 25px); white-space: nowrap; }
+  .contact-details { text-align: center; }
+}
