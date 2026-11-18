@@ -303,3 +303,7 @@ button, input, textarea { font: inherit; }
   .gallery-copy, .contact-intro { text-align: center; }
   .site-footer > a[href^="tel:"] { padding-left: 15px; }
 }
+
+/* Alle accentlijnen bij de hoofdfoto even dik. */
+.hero .hero-copy::after { height: 5px; }
+@media (max-width: 620px) { .hero .hero-copy::after { height: 4px; } }
