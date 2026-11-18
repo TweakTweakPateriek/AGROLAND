@@ -268,3 +268,9 @@ button, input, textarea { font: inherit; }
 @media (max-width: 620px) {
   .hero-about .hero-copy { font-size: clamp(19px, 5vw, 28px); max-width: calc(100vw - 40px); white-space: normal; }
 }
+
+/* Centreer de iconen boven de kernwoorden. */
+.why-item { display: flex; flex-direction: column; align-items: center; text-align: center; }
+.icon-professioneel { position: relative; left: -4.5px; }
+@media (max-width: 620px) { .icon-professioneel { left: -3.4px; } }
+.about-copy { width: 100%; max-width: none; }
