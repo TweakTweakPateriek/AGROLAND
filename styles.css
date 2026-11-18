@@ -298,3 +298,8 @@ button, input, textarea { font: inherit; }
   .products h2 { font-size: clamp(17px, 5vw, 25px); white-space: nowrap; }
   .contact-details { text-align: center; }
 }
+
+@media (max-width: 620px) {
+  .gallery-copy, .contact-intro { text-align: center; }
+  .site-footer > a[href^="tel:"] { padding-left: 15px; }
+}
