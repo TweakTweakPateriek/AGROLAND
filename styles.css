@@ -307,3 +307,21 @@ button, input, textarea { font: inherit; }
 /* Alle accentlijnen bij de hoofdfoto even dik. */
 .hero .hero-copy::after { height: 5px; }
 @media (max-width: 620px) { .hero .hero-copy::after { height: 4px; } }
+
+/* Laat de inhoud van het samenwerkingsblok na elkaar verschijnen. */
+.collab > div { opacity: 1; transform: none; }
+.collab > div > h2, .collab > div > p, .collab > div > .button {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity .68s ease, transform .72s cubic-bezier(.2,.75,.25,1);
+}
+.collab.content-visible > div > h2,
+.collab.content-visible > div > p,
+.collab.content-visible > div > .button { opacity: 1; transform: translateY(0); }
+.collab.content-visible > div > p { transition-delay: .12s; }
+.collab.content-visible > div > .button { transition-delay: .24s; }
+.collab.content-visible > img { transition-delay: .36s; }
+.collab.content-visible > div > .button:hover { transform: translateY(-3px); }
+@media (prefers-reduced-motion: reduce) {
+  .collab > div > h2, .collab > div > p, .collab > div > .button { opacity: 1; transform: none; transition: none; }
+}
