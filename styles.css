@@ -143,7 +143,7 @@ button, input, textarea { font: inherit; }
 .marquee:last-child { margin-bottom: 0; }
 .marquee-track { display: flex; width: max-content; gap: 28px; animation: move-right 140s linear infinite; }
 .marquee:nth-child(2) .marquee-track { animation-name: move-left; animation-duration: 140s; animation-delay: -35s; }
-.marquee:hover .marquee-track, .marquee:focus-within .marquee-track { animation-play-state: paused; }
+.marquee:focus-within .marquee-track { animation-play-state: paused; }
 .gallery-card { display: block; border: 0; padding: 0; width: clamp(280px, 32vw, 450px); height: clamp(165px, 19vw, 250px); overflow: hidden; background: #123c30; cursor: zoom-in; }
 .gallery-card img { width: 100%; height: 100%; object-fit: cover; transition: transform .45s ease; }
 .gallery-card:hover img { transform: scale(1.045); }
