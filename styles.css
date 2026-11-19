@@ -74,7 +74,7 @@ button, input, textarea { font: inherit; }
 .hero-services .hero-line-two { animation-delay: .98s; }
 .hero-services .hero-copy::after { width: var(--services-accent-width, 72%); height: 5px; margin-top: 15px; border-radius: 999px; background: var(--accent); transform: scaleX(0); transform-origin: right; animation: accent-line-in .55s 1.55s cubic-bezier(.2,.75,.25,1) both; }
 .hero-about .hero-copy::after { width: var(--about-accent-width, 86%); margin-top: 15px; border-radius: 999px; background: var(--accent); transform: scaleX(0); transform-origin: right; animation: accent-line-in .55s 1.55s cubic-bezier(.2,.75,.25,1) both; }
-.hero-action { position: absolute; right: clamp(28px, 5.7vw, 96px); bottom: 22px; }
+.hero-action { position: absolute; right: clamp(28px, 5.7vw, 96px); bottom: clamp(28px, 5.7vw, 96px); }
 .button { display: inline-flex; align-items: center; justify-content: center; min-height: 51px; padding: 10px 30px; border: 0; border-radius: 14px; background: var(--lime); color: var(--white); font: 700 21px/1.2 var(--display); text-align: center; text-decoration: none; cursor: pointer; transition: transform .2s ease, box-shadow .2s ease, background .2s ease; }
 .button:hover { transform: translateY(-3px); box-shadow: 0 9px 22px #012d2322; background: #d6e326; }
 .button.dark { background: var(--green); }
