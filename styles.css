@@ -325,3 +325,15 @@ button, input, textarea { font: inherit; }
 @media (prefers-reduced-motion: reduce) {
   .collab > div > h2, .collab > div > p, .collab > div > .button { opacity: 1; transform: none; transition: none; }
 }
+
+/* Titel en tekst verschijnen na elkaar; de knop volgt zodra die in beeld komt. */
+.about-copy.reveal { opacity: 1; transform: none; }
+.about-copy.reveal > h1, .about-copy.reveal > p {
+  opacity: 0; transform: translateY(18px);
+  transition: opacity .65s ease, transform .65s ease;
+}
+.about-copy.reveal.is-visible > h1, .about-copy.reveal.is-visible > p { opacity: 1; transform: none; }
+.about-copy.reveal.is-visible > p { transition-delay: .14s; }
+@media (prefers-reduced-motion: reduce) {
+  .about-copy.reveal > h1, .about-copy.reveal > p { opacity: 1; transform: none; transition: none; }
+}
